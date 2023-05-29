@@ -1,0 +1,28 @@
+{
+    "name":"laravel",
+    "service": "workspace",
+    "workspaceFolder": "/app",
+    "dockerComposeFile": [
+        "docker-compose.yaml",
+        "docker-compose.workspace.yaml"
+        ],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"astro-build.astro-vscode",
+				"onecentlin.laravel-blade",
+				"onecentlin.laravel5-snippets",
+				"codingyu.laravel-goto-view",
+				"amiralizadeh9480.laravel-extra-intellisense",
+				"shufo.vscode-blade-formatter",
+				"onecentlin.laravel-extension-pack",
+				"ahinkle.laravel-model-snippets",
+				"MisterJ.laravel-expack",
+				"adrianwilczynski.alpine-js-intellisense",
+				"sperovita.alpinejs-syntax-highlight",
+				"pcbowers.alpine-intellisense",
+				"entexa.tall-stack"
+			]
+		}
+	}
+}

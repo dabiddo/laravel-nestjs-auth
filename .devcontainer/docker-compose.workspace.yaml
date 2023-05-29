@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  workspace:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: larave-app #name of the image
+    depends_on:
+      - mysql
+      - redis
+    volumes:
+      - ../:/app:cached
