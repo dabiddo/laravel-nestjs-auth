@@ -1,10 +1,10 @@
-#Laravel Passport & NestJs Shared Auth
+# Laravel Passport & NestJs Shared Auth
 This repo contains 2 small projects that serve as examples on how to make Laravel Passport Authentication be accepted in NestJs with the Passport Js library.
 
-##Why?
+## Why?
 At work we are migrating a Laravel Monolith App to Microservices, and we needed a way to transition users to the NestJs microservices using the same Jwt Token.
 
-##How to Run the code?
+## How to Run the code?
 I made my best to generate a fully functional VS Devcontainer environment,so you can run it right after cloning the repo, sadly I wasn't able to install NodeJs from the Dockerfile, so here are the instructions.
 
 ### Clone the repo.
@@ -39,4 +39,5 @@ The NestJs project already has all the libraries needed, so you can go ahead and
 `cd nest-passport`
 `npm install`
 
-The Project already has harcoded connection to the Database, inside the `src/app.module.ts`
+The Project already has harcoded connection to the Database, inside the `src/app.module.ts` and whenever I needed to reference the keys using the `fs` package.
+Ideally those should be on a `.env` file.
