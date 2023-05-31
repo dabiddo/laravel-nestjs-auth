@@ -23,7 +23,7 @@ export class AuthController {
     const match = await bcrypt.compare(req.password, hash);
 
     if(match === true) {
-      const payload = { username: response.name, email: response.email, sub: response.id };
+      const payload = { username: response.email, sub: response.id };
       const privateKey = fs.readFileSync('/app/laravel-auth/storage/oauth-private.key');
       return {
         access_token: jwt.sign(payload, privateKey, { algorithm: 'RS256', expiresIn: '1h' })

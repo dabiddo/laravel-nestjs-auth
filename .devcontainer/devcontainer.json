@@ -21,7 +21,8 @@
 				"adrianwilczynski.alpine-js-intellisense",
 				"sperovita.alpinejs-syntax-highlight",
 				"pcbowers.alpine-intellisense",
-				"entexa.tall-stack"
+				"entexa.tall-stack",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
