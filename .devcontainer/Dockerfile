@@ -45,5 +45,7 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN rm -rf composer-setup.php
 
+ENV HOST 0.0.0.0
+
 # Changing Workdir
 WORKDIR /app

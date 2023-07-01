@@ -1,0 +1,58 @@
+{
+    "$schema": "https://www.krakend.io/schema/v3.json",
+    "version": 3,
+    "name": "KrakenD - API Gateway",
+    "timeout": "3000ms",
+    "cache_ttl": "300s",
+    "output_encoding": "json",
+    "debug_endpoint": true,
+    "echo_endpoint": true,
+    "endpoints": [
+    {
+      "endpoint": "/v1/cats",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "/api/v1/cats",
+          "encoding": "json",
+          "method": "GET",
+          "extra_config": {
+            "github.com/devopsfaith/krakend-cors": {
+              "allow_origins": ["*"],
+              "allow_methods": ["GET"],
+              "allow_headers": ["Content-Type"]
+            }
+          },
+          "host": [
+            "http://nginx"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/v2/cats",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "/api/v2/cats",
+          "encoding": "json",
+          "method": "GET",
+          "extra_config": {
+            "github.com/devopsfaith/krakend-cors": {
+              "allow_origins": ["*"],
+              "allow_methods": ["GET"],
+              "allow_headers": ["Content-Type"]
+            }
+          },
+          "host": [
+            "http://workspace:3000"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    }
+  ]
+}

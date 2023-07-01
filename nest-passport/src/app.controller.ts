@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('api/v2/cats')
+  getCats(): any {
+    return { message: 'v2 Cats' };
+  }
 }
